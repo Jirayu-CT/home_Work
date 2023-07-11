@@ -32,7 +32,7 @@ def Sum():
     print("เลขที่มากกว่า 100 แต่น้อยกว่าหรือเท่ากับมี 1000 %d ตัวเลข" %(len(c_list)))
     print("เลขที่มากกว่า 1000 %d ตัวเลข" %(len(d_list)))
 
-    print(" Prese 'q'for exit this program")
+    print(" Press 'q'for exit this program")
 
 
 def ListToString(num_str):
@@ -43,19 +43,21 @@ def ListToString(num_str):
 
     return str1
 
+def while_input():
+    while True:
+        num = int(input("Press input Number: "))
+        num_List.append(str(num))
+        Check_numbers(num)
 
+        if num == 0:
+            Sum()
+            break
 
 
 while True:
-    num = int(input("Prese input Number: "))
-    num_List.append(str(num))
-    Check_numbers(num)
+    num_List = []
+    while_input()
 
-    if num == 0:
-        Sum()
-        break
-
-while True:
     _exit = input()
     if _exit == "q":
         print("END PROGRAME")
