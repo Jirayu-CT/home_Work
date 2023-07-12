@@ -53,7 +53,7 @@ def while_input():
             Sum()
             break
 
-
+print("-----Press 0 To Conclusion-----")
 while True:
     num_List = []
     while_input()
