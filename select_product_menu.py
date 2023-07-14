@@ -38,32 +38,32 @@ def Mine_program():
         if select == "n":
             Show_bill()
 
-            muney = 0
-            muney = int(input("จำนวนเงินที่จ่าย : "))
+            money = 0
+            money = int(input("จำนวนเงินที่จ่าย : "))
 
-            if muney == total_price:
+            if money == total_price:
                 print("ขอบคุณที่ใช้บริการ โอกาศหน้าเชิญร้านบ่าวเปรมใหม่นะครับ:))")
                 break
-            elif muney < total_price:
+            elif money < total_price:
                 Money_not_enough()
                 print("ขอบคุณที่ใช้บริการ โอกาศหน้าเชิญร้านบ่าวเปรมใหม่นะครับ:))")
                 break
             else:
-                print("เงินทอน: %s บาท" %(muney-total_price))
+                print("เงินทอน: %s บาท" % (money - total_price))
                 print("ขอบคุณที่ใช้บริการ โอกาศหน้าเชิญร้านบ่าวเปรมใหม่นะครับ:))")
                 break
 
 
 #โชว์บิลรายการที่สั่งซื้อ
 def Show_bill():
-    total_price = 0
+    totalPrice = 0
     print("บ่าวเปรม ลาบ-ก้อย-ซอยจุ-ต้มแซ่บ".center(35, "-"))
 
     for number in range(len(show_bill)):
         print(show_bill[number][0], "*", show_bill[number][1], "--", show_bill[number][2], "บาท")
-        total_price += (show_bill[number][1] * show_bill[number][2])
+        totalPrice += (show_bill[number][1] * show_bill[number][2])
 
-    print("Total : %s Bath" % total_price)
+    print("Total : %s Bath" % totalPrice)
 
 
 #ถ้าจ่ายเงินน้อยกว่าจะให้วนจ่ายใหม่ จนกว่าจะจ่ายเงิน เกินหรือเท่ากับ ราคารวม
@@ -83,7 +83,6 @@ def Show_menu():
     print("บ่าวเปรม ลาบ-ก้อย-ซอยจุ-ต้มแซ่บ".center(35, "-"))
     for number in range(len(menu_list)):
         print(menu_list[number][0], menu_list[number][1], "บาท")
-
 
 
 Show_menu()
